@@ -7,14 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F35F2CA23285F530058D984 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F35F2C923285F530058D984 /* OnBoarding.storyboard */; };
+		6F609B8D232BC75400216497 /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F609B8C232BC75400216497 /* OnboardingContentViewController.swift */; };
+		6F609B8F232BC95700216497 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F609B8E232BC95700216497 /* OnboardingPageViewController.swift */; };
+		6F609B91232BD24600216497 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F609B90232BD24600216497 /* OnboardingViewController.swift */; };
 		6FA57541232769A900B687CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA57540232769A900B687CF /* AppDelegate.swift */; };
 		6FA57543232769A900B687CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA57542232769A900B687CF /* ViewController.swift */; };
 		6FA57546232769A900B687CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FA57544232769A900B687CF /* Main.storyboard */; };
 		6FA57548232769AA00B687CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FA57547232769AA00B687CF /* Assets.xcassets */; };
 		6FA5754B232769AA00B687CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FA57549232769AA00B687CF /* LaunchScreen.storyboard */; };
+		6FB4518223293E3600D84091 /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4518123293E3600D84091 /* Nunito-ExtraLight.ttf */; };
+		6FB4518423293E4300D84091 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4518323293E3E00D84091 /* Nunito-Regular.ttf */; };
+		6FB4518623293E5800D84091 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4518523293E5800D84091 /* Nunito-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F35F2C923285F530058D984 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
+		6F609B8C232BC75400216497 /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
+		6F609B8E232BC95700216497 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
+		6F609B90232BD24600216497 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		6FA5753D232769A900B687CF /* GroceryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA57540232769A900B687CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FA57542232769A900B687CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +33,9 @@
 		6FA57547232769AA00B687CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FA5754A232769AA00B687CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6FA5754C232769AA00B687CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FB4518123293E3600D84091 /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
+		6FB4518323293E3E00D84091 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		6FB4518523293E5800D84091 /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +52,7 @@
 		6FA57534232769A900B687CF = {
 			isa = PBXGroup;
 			children = (
+				6FB4518023293E1F00D84091 /* fonts */,
 				6FA5753F232769A900B687CF /* GroceryApp */,
 				6FA5753E232769A900B687CF /* Products */,
 			);
@@ -57,11 +72,25 @@
 				6FA57540232769A900B687CF /* AppDelegate.swift */,
 				6FA57542232769A900B687CF /* ViewController.swift */,
 				6FA57544232769A900B687CF /* Main.storyboard */,
+				6F35F2C923285F530058D984 /* OnBoarding.storyboard */,
 				6FA57547232769AA00B687CF /* Assets.xcassets */,
 				6FA57549232769AA00B687CF /* LaunchScreen.storyboard */,
 				6FA5754C232769AA00B687CF /* Info.plist */,
+				6F609B8C232BC75400216497 /* OnboardingContentViewController.swift */,
+				6F609B8E232BC95700216497 /* OnboardingPageViewController.swift */,
+				6F609B90232BD24600216497 /* OnboardingViewController.swift */,
 			);
 			path = GroceryApp;
+			sourceTree = "<group>";
+		};
+		6FB4518023293E1F00D84091 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6FB4518523293E5800D84091 /* Nunito-Light.ttf */,
+				6FB4518323293E3E00D84091 /* Nunito-Regular.ttf */,
+				6FB4518123293E3600D84091 /* Nunito-ExtraLight.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +151,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FB4518423293E4300D84091 /* Nunito-Regular.ttf in Resources */,
+				6FB4518623293E5800D84091 /* Nunito-Light.ttf in Resources */,
 				6FA5754B232769AA00B687CF /* LaunchScreen.storyboard in Resources */,
 				6FA57548232769AA00B687CF /* Assets.xcassets in Resources */,
 				6FA57546232769A900B687CF /* Main.storyboard in Resources */,
+				6F35F2CA23285F530058D984 /* OnBoarding.storyboard in Resources */,
+				6FB4518223293E3600D84091 /* Nunito-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F609B8F232BC95700216497 /* OnboardingPageViewController.swift in Sources */,
 				6FA57543232769A900B687CF /* ViewController.swift in Sources */,
+				6F609B91232BD24600216497 /* OnboardingViewController.swift in Sources */,
+				6F609B8D232BC75400216497 /* OnboardingContentViewController.swift in Sources */,
 				6FA57541232769A900B687CF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
