@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="Sk6-K0-WeN">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingViewController" id="O6V-st-6vi" customClass="OnboardingViewController" customModule="GroceryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XGx-Bt-2uY">
+                        <rect key="frame" x="0.0" y="0.0" width="365" height="617"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2cT-Xl-VHy">
+                                <rect key="frame" x="20" y="448.33333333333331" width="325" height="134.66666666666669"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mg8-FO-gfb">
+                                        <rect key="frame" x="62.666666666666686" y="4.6666666666666856" width="200" height="125"/>
+                                        <subviews>
+                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="EtN-Qa-Jyz">
+                                                <rect key="frame" x="80.333333333333329" y="0.0" width="39" height="37"/>
+                                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="currentPageIndicatorTintColor" red="0.99215686270000003" green="0.031372549020000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            </pageControl>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hm1-8W-pna">
+                                                <rect key="frame" x="0.0" y="65" width="200" height="60"/>
+                                                <color key="backgroundColor" red="0.99215686270000003" green="0.031372549020000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="aph-El-CJc"/>
+                                                    <constraint firstAttribute="width" constant="200" id="yHS-nT-Nv9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                                <state key="normal" title="NEXT">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="nextButtonTappedWithSender:" destination="O6V-st-6vi" eventType="touchUpInside" id="TNY-3w-FES"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Mg8-FO-gfb" firstAttribute="centerY" secondItem="2cT-Xl-VHy" secondAttribute="centerY" id="6MG-J8-r7k"/>
+                                    <constraint firstItem="Mg8-FO-gfb" firstAttribute="centerX" secondItem="2cT-Xl-VHy" secondAttribute="centerX" id="feJ-Cj-HgM"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jEF-B6-hng">
+                                <rect key="frame" x="20" y="44" width="325" height="404.33333333333331"/>
+                                <connections>
+                                    <segue destination="BQI-bo-UnV" kind="embed" id="ZE9-sG-nDO"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2cT-Xl-VHy" firstAttribute="top" secondItem="jEF-B6-hng" secondAttribute="bottom" id="B9V-Y2-S7B"/>
+                            <constraint firstItem="yYN-RJ-Ait" firstAttribute="trailing" secondItem="2cT-Xl-VHy" secondAttribute="trailing" constant="20" id="DT3-Yd-E7A"/>
+                            <constraint firstItem="yYN-RJ-Ait" firstAttribute="trailing" secondItem="jEF-B6-hng" secondAttribute="trailing" constant="20" id="Dbp-dR-eP2"/>
+                            <constraint firstItem="2cT-Xl-VHy" firstAttribute="height" secondItem="jEF-B6-hng" secondAttribute="height" multiplier="1:3" id="HOQ-yw-VI5"/>
+                            <constraint firstItem="jEF-B6-hng" firstAttribute="top" secondItem="yYN-RJ-Ait" secondAttribute="top" id="ZJ5-hX-hwu"/>
+                            <constraint firstItem="2cT-Xl-VHy" firstAttribute="leading" secondItem="yYN-RJ-Ait" secondAttribute="leading" constant="20" id="k1l-92-WxQ"/>
+                            <constraint firstItem="2cT-Xl-VHy" firstAttribute="bottom" secondItem="yYN-RJ-Ait" secondAttribute="bottom" id="nNj-Zd-O9A"/>
+                            <constraint firstItem="jEF-B6-hng" firstAttribute="leading" secondItem="yYN-RJ-Ait" secondAttribute="leading" constant="20" id="ynj-Ap-PPj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yYN-RJ-Ait"/>
+                    </view>
+                    <size key="freeformSize" width="365" height="617"/>
+                    <connections>
+                        <outlet property="nextButton" destination="Hm1-8W-pna" id="yyu-ih-G8r"/>
+                        <outlet property="pageControl" destination="EtN-Qa-Jyz" id="PcE-or-kUl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9pX-8p-Lxx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-639.13043478260875" y="107.8125"/>
+        </scene>
+        <!--Onboarding Page View Controller-->
+        <scene sceneID="hrt-u4-dKZ">
+            <objects>
+                <pageViewController storyboardIdentifier="OnboardingPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="BQI-bo-UnV" customClass="OnboardingPageViewController" customModule="GroceryApp" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZu-bc-jr0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="104" y="108"/>
+        </scene>
+        <!--Onboarding Content View Controller-->
+        <scene sceneID="rwM-xj-RVa">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingContentViewController" id="HC1-2o-QjF" customClass="OnboardingContentViewController" customModule="GroceryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m5w-sL-T3H">
+                        <rect key="frame" x="0.0" y="0.0" width="325" height="484.32999999999998"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eMJ-Id-fcd">
+                                <rect key="frame" x="36" y="124.00000000000003" width="253" height="303.66666666666674"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x55-Gf-U3A">
+                                        <rect key="frame" x="10" y="0.0" width="233" height="174.66666666666666"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="x55-Gf-U3A" secondAttribute="height" multiplier="4:3" id="kIR-ZC-Vg7"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="lUg-EX-fVo">
+                                        <rect key="frame" x="5.6666666666666714" y="189.66666666666669" width="241.66666666666663" height="114"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Need Groceries Now?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5L-o8-6HY">
+                                                <rect key="frame" x="0.0" y="0.0" width="241.66666666666666" height="34.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select wide ranges of products from fresh fruits to delicious snacks." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nd-0g-qq4">
+                                                <rect key="frame" x="8.6666666666666714" y="48.333333333333321" width="224.66666666666663" height="65.666666666666686"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NCp-ZY-ouw" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eMJ-Id-fcd" secondAttribute="bottom" constant="10" id="MPs-li-zxy"/>
+                            <constraint firstItem="eMJ-Id-fcd" firstAttribute="leading" secondItem="m5w-sL-T3H" secondAttribute="leadingMargin" constant="20" id="ObD-6Y-adL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eMJ-Id-fcd" secondAttribute="trailing" constant="20" id="ciO-cm-JKc"/>
+                            <constraint firstItem="eMJ-Id-fcd" firstAttribute="top" secondItem="NCp-ZY-ouw" secondAttribute="top" constant="80" id="fVC-Vu-E5R"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NCp-ZY-ouw"/>
+                    </view>
+                    <size key="freeformSize" width="325" height="484.32999999999998"/>
+                    <connections>
+                        <outlet property="contentImageView" destination="x55-Gf-U3A" id="0w8-S1-d84"/>
+                        <outlet property="headingLabel" destination="Q5L-o8-6HY" id="IJq-vG-HAf"/>
+                        <outlet property="subHeadingLabel" destination="1nd-0g-qq4" id="keK-Hx-hCE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zHe-o9-Cfw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="706.52173913043487" y="106.47321428571428"/>
+        </scene>
+    </scenes>
+</document>
