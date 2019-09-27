@@ -3,32 +3,45 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C767EA341C5320BD62CAFD4 /* Pods_GroceryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD5CA7C60128ADA424C5B59 /* Pods_GroceryApp.framework */; };
+		6F1FFBE0233C68F4008744D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1FFBDF233C68F4008744D8 /* Constants.swift */; };
 		6F35F2CA23285F530058D984 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F35F2C923285F530058D984 /* OnBoarding.storyboard */; };
 		6F609B8D232BC75400216497 /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F609B8C232BC75400216497 /* OnboardingContentViewController.swift */; };
 		6F609B8F232BC95700216497 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F609B8E232BC95700216497 /* OnboardingPageViewController.swift */; };
 		6F609B91232BD24600216497 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F609B90232BD24600216497 /* OnboardingViewController.swift */; };
+		6F8C922C232EE004001985D8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C922B232EE004001985D8 /* LoginViewController.swift */; };
+		6F8C922E232EE00F001985D8 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C922D232EE00F001985D8 /* RegistrationViewController.swift */; };
+		6F8C9230232EE783001985D8 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C922F232EE783001985D8 /* ForgotPasswordViewController.swift */; };
+		6F8C9233232EF5D5001985D8 /* FormValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C9232232EF5D5001985D8 /* FormValidation.swift */; };
 		6FA57541232769A900B687CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA57540232769A900B687CF /* AppDelegate.swift */; };
-		6FA57543232769A900B687CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA57542232769A900B687CF /* ViewController.swift */; };
+		6FA57543232769A900B687CF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA57542232769A900B687CF /* HomeViewController.swift */; };
 		6FA57546232769A900B687CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FA57544232769A900B687CF /* Main.storyboard */; };
 		6FA57548232769AA00B687CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FA57547232769AA00B687CF /* Assets.xcassets */; };
 		6FA5754B232769AA00B687CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FA57549232769AA00B687CF /* LaunchScreen.storyboard */; };
 		6FB4518223293E3600D84091 /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4518123293E3600D84091 /* Nunito-ExtraLight.ttf */; };
 		6FB4518423293E4300D84091 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4518323293E3E00D84091 /* Nunito-Regular.ttf */; };
 		6FB4518623293E5800D84091 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4518523293E5800D84091 /* Nunito-Light.ttf */; };
+		6FC27A8C232FC85B00EA9E86 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FC27A8B232FC85B00EA9E86 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2CFF23D75CF702E56FD7658A /* Pods-GroceryApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryApp.release.xcconfig"; path = "Target Support Files/Pods-GroceryApp/Pods-GroceryApp.release.xcconfig"; sourceTree = "<group>"; };
+		6F1FFBDF233C68F4008744D8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6F35F2C923285F530058D984 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		6F609B8C232BC75400216497 /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
 		6F609B8E232BC95700216497 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		6F609B90232BD24600216497 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		6F8C922B232EE004001985D8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6F8C922D232EE00F001985D8 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		6F8C922F232EE783001985D8 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		6F8C9232232EF5D5001985D8 /* FormValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValidation.swift; sourceTree = "<group>"; };
 		6FA5753D232769A900B687CF /* GroceryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA57540232769A900B687CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6FA57542232769A900B687CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6FA57542232769A900B687CF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6FA57545232769A900B687CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6FA57547232769AA00B687CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FA5754A232769AA00B687CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +49,9 @@
 		6FB4518123293E3600D84091 /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
 		6FB4518323293E3E00D84091 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		6FB4518523293E5800D84091 /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
+		6FC27A8B232FC85B00EA9E86 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A50966C33CE60276921E89D3 /* Pods-GroceryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryApp.debug.xcconfig"; path = "Target Support Files/Pods-GroceryApp/Pods-GroceryApp.debug.xcconfig"; sourceTree = "<group>"; };
+		CDD5CA7C60128ADA424C5B59 /* Pods_GroceryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GroceryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,18 +59,51 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C767EA341C5320BD62CAFD4 /* Pods_GroceryApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F8C9229232EDF9E001985D8 /* Onboading */ = {
+			isa = PBXGroup;
+			children = (
+				6F35F2C923285F530058D984 /* OnBoarding.storyboard */,
+				6F609B8C232BC75400216497 /* OnboardingContentViewController.swift */,
+				6F609B8E232BC95700216497 /* OnboardingPageViewController.swift */,
+				6F609B90232BD24600216497 /* OnboardingViewController.swift */,
+			);
+			path = Onboading;
+			sourceTree = "<group>";
+		};
+		6F8C922A232EDFF1001985D8 /* LoginRegistration */ = {
+			isa = PBXGroup;
+			children = (
+				6F8C922B232EE004001985D8 /* LoginViewController.swift */,
+				6F8C922D232EE00F001985D8 /* RegistrationViewController.swift */,
+				6F8C922F232EE783001985D8 /* ForgotPasswordViewController.swift */,
+			);
+			path = LoginRegistration;
+			sourceTree = "<group>";
+		};
+		6F8C9231232EF5B0001985D8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6F8C9232232EF5D5001985D8 /* FormValidation.swift */,
+				6F1FFBDF233C68F4008744D8 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		6FA57534232769A900B687CF = {
 			isa = PBXGroup;
 			children = (
 				6FB4518023293E1F00D84091 /* fonts */,
 				6FA5753F232769A900B687CF /* GroceryApp */,
 				6FA5753E232769A900B687CF /* Products */,
+				BF172EB453B97DB25B7725F4 /* Pods */,
+				C87016BC135C410B8ECAAA08 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,16 +118,16 @@
 		6FA5753F232769A900B687CF /* GroceryApp */ = {
 			isa = PBXGroup;
 			children = (
+				6F8C9231232EF5B0001985D8 /* Helpers */,
+				6F8C922A232EDFF1001985D8 /* LoginRegistration */,
+				6F8C9229232EDF9E001985D8 /* Onboading */,
 				6FA57540232769A900B687CF /* AppDelegate.swift */,
-				6FA57542232769A900B687CF /* ViewController.swift */,
+				6FA57542232769A900B687CF /* HomeViewController.swift */,
 				6FA57544232769A900B687CF /* Main.storyboard */,
-				6F35F2C923285F530058D984 /* OnBoarding.storyboard */,
 				6FA57547232769AA00B687CF /* Assets.xcassets */,
 				6FA57549232769AA00B687CF /* LaunchScreen.storyboard */,
+				6FC27A8B232FC85B00EA9E86 /* GoogleService-Info.plist */,
 				6FA5754C232769AA00B687CF /* Info.plist */,
-				6F609B8C232BC75400216497 /* OnboardingContentViewController.swift */,
-				6F609B8E232BC95700216497 /* OnboardingPageViewController.swift */,
-				6F609B90232BD24600216497 /* OnboardingViewController.swift */,
 			);
 			path = GroceryApp;
 			sourceTree = "<group>";
@@ -93,6 +142,23 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
+		BF172EB453B97DB25B7725F4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A50966C33CE60276921E89D3 /* Pods-GroceryApp.debug.xcconfig */,
+				2CFF23D75CF702E56FD7658A /* Pods-GroceryApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C87016BC135C410B8ECAAA08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDD5CA7C60128ADA424C5B59 /* Pods_GroceryApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -100,9 +166,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6FA5754F232769AA00B687CF /* Build configuration list for PBXNativeTarget "GroceryApp" */;
 			buildPhases = (
+				197DA335E09C6AB3402F6C4A /* [CP] Check Pods Manifest.lock */,
 				6FA57539232769A900B687CF /* Sources */,
 				6FA5753A232769A900B687CF /* Frameworks */,
 				6FA5753B232769A900B687CF /* Resources */,
+				AF99B94BA4CABDC443D1A0B3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FB4518423293E4300D84091 /* Nunito-Regular.ttf in Resources */,
+				6FC27A8C232FC85B00EA9E86 /* GoogleService-Info.plist in Resources */,
 				6FB4518623293E5800D84091 /* Nunito-Light.ttf in Resources */,
 				6FA5754B232769AA00B687CF /* LaunchScreen.storyboard in Resources */,
 				6FA57548232769AA00B687CF /* Assets.xcassets in Resources */,
@@ -163,14 +232,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		197DA335E09C6AB3402F6C4A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GroceryApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF99B94BA4CABDC443D1A0B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GroceryApp/Pods-GroceryApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GroceryApp/Pods-GroceryApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GroceryApp/Pods-GroceryApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6FA57539232769A900B687CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F8C9230232EE783001985D8 /* ForgotPasswordViewController.swift in Sources */,
+				6F8C922C232EE004001985D8 /* LoginViewController.swift in Sources */,
 				6F609B8F232BC95700216497 /* OnboardingPageViewController.swift in Sources */,
-				6FA57543232769A900B687CF /* ViewController.swift in Sources */,
+				6FA57543232769A900B687CF /* HomeViewController.swift in Sources */,
 				6F609B91232BD24600216497 /* OnboardingViewController.swift in Sources */,
+				6F1FFBE0233C68F4008744D8 /* Constants.swift in Sources */,
+				6F8C922E232EE00F001985D8 /* RegistrationViewController.swift in Sources */,
+				6F8C9233232EF5D5001985D8 /* FormValidation.swift in Sources */,
 				6F609B8D232BC75400216497 /* OnboardingContentViewController.swift in Sources */,
 				6FA57541232769A900B687CF /* AppDelegate.swift in Sources */,
 			);
@@ -316,6 +432,7 @@
 		};
 		6FA57550232769AA00B687CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A50966C33CE60276921E89D3 /* Pods-GroceryApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -334,6 +451,7 @@
 		};
 		6FA57551232769AA00B687CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CFF23D75CF702E56FD7658A /* Pods-GroceryApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
