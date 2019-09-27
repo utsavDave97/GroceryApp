@@ -11,7 +11,7 @@ import FirebaseAuth
 
 class ForgotPasswordViewController: UIViewController
 {
-    
+    //MARK: Outlets
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var sendEmailButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
@@ -30,6 +30,7 @@ class ForgotPasswordViewController: UIViewController
         // Do any additional setup after loading the view.
     }
     
+    //MARK: Actions
     @IBAction func sendEmailButtonTapped(_ sender: Any)
     {
         //Validate fields
@@ -68,7 +69,7 @@ class ForgotPasswordViewController: UIViewController
         //Check all the fields are filled in
         if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
         {
-            return "Please fill in all fields."
+            return "Please fill in email."
         }
         
         return nil
@@ -84,8 +85,9 @@ class ForgotPasswordViewController: UIViewController
     func transitionToLogin()
     {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let homeViewController = storyboard.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomeViewController {
-            present(homeViewController, animated: true, completion: nil)
+        if let loginViewController = storyboard.instantiateViewController(withIdentifier: Constants.Storyboard.loginViewController) as? LoginViewController
+        {
+            present(loginViewController, animated: true, completion: nil)
         }
     }
     
