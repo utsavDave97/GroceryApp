@@ -26,6 +26,7 @@
 		6FB4518423293E4300D84091 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4518323293E3E00D84091 /* Nunito-Regular.ttf */; };
 		6FB4518623293E5800D84091 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4518523293E5800D84091 /* Nunito-Light.ttf */; };
 		6FC27A8C232FC85B00EA9E86 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FC27A8B232FC85B00EA9E86 /* GoogleService-Info.plist */; };
+		6FDBC39C233E97A800B71DFE /* CustomizedTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDBC39B233E97A800B71DFE /* CustomizedTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		6FB4518323293E3E00D84091 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		6FB4518523293E5800D84091 /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
 		6FC27A8B232FC85B00EA9E86 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6FDBC39B233E97A800B71DFE /* CustomizedTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizedTabBar.swift; sourceTree = "<group>"; };
 		A50966C33CE60276921E89D3 /* Pods-GroceryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryApp.debug.xcconfig"; path = "Target Support Files/Pods-GroceryApp/Pods-GroceryApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CDD5CA7C60128ADA424C5B59 /* Pods_GroceryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GroceryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -118,6 +120,7 @@
 		6FA5753F232769A900B687CF /* GroceryApp */ = {
 			isa = PBXGroup;
 			children = (
+				6FDBC398233E971700B71DFE /* New Group */,
 				6F8C9231232EF5B0001985D8 /* Helpers */,
 				6F8C922A232EDFF1001985D8 /* LoginRegistration */,
 				6F8C9229232EDF9E001985D8 /* Onboading */,
@@ -140,6 +143,14 @@
 				6FB4518123293E3600D84091 /* Nunito-ExtraLight.ttf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		6FDBC398233E971700B71DFE /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				6FDBC39B233E97A800B71DFE /* CustomizedTabBar.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		BF172EB453B97DB25B7725F4 /* Pods */ = {
@@ -279,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FDBC39C233E97A800B71DFE /* CustomizedTabBar.swift in Sources */,
 				6F8C9230232EE783001985D8 /* ForgotPasswordViewController.swift in Sources */,
 				6F8C922C232EE004001985D8 /* LoginViewController.swift in Sources */,
 				6F609B8F232BC95700216497 /* OnboardingPageViewController.swift in Sources */,

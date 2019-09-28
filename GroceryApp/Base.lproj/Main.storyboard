@@ -13,10 +13,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Home View Controller-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="GroceryApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HoemVC" id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,6 +27,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lnG-1y-j5v" customClass="CustomizedTabBar" customModule="GroceryApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="gHS-v0-1OA"/>
+                                    <tabBarItem systemItem="more" id="GZH-xN-mkI"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -39,6 +48,101 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3303" y="33"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KBG-qJ-hVo">
+            <objects>
+                <viewController id="jsz-rz-gja" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IuW-fY-kXa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yC0-hc-AYC">
+                                <rect key="frame" x="172" y="772.5" width="70" height="70"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="kSm-v4-nhK"/>
+                                    <constraint firstAttribute="width" constant="70" id="xXg-zR-E0Q"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="yC0-hc-AYC" secondAttribute="baseline" id="Dvv-C2-eIy"/>
+                            <constraint firstItem="yC0-hc-AYC" firstAttribute="centerX" secondItem="IuW-fY-kXa" secondAttribute="centerX" id="TjD-qZ-cbz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hhg-4J-4n8"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="1hf-f3-b8t"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wLU-ZS-C9U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4080" y="-281"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1de-dh-Chp">
+            <objects>
+                <viewController id="2RE-fK-Jqb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Am-Oa-55f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhh-sf-Bz7">
+                                <rect key="frame" x="172" y="772.5" width="70" height="70"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="Vap-AG-LCs"/>
+                                    <constraint firstAttribute="height" constant="70" id="jyJ-ct-baO"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Zhh-sf-Bz7" firstAttribute="centerX" secondItem="5Am-Oa-55f" secondAttribute="centerX" id="Apa-RY-f0n"/>
+                            <constraint firstItem="Zhh-sf-Bz7" firstAttribute="baseline" secondItem="5Am-Oa-55f" secondAttribute="bottomMargin" id="shi-6Q-a6p"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Yr-K1-T5b"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="ocU-J0-tn6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tjg-Np-9Uc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4080" y="-988"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="d7a-ee-FXJ">
+            <objects>
+                <tabBarController storyboardIdentifier="HomeViewController" id="Acz-XF-Izv" customClass="HomeViewController" customModule="GroceryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Ir-SO-WXn" customClass="CustomizedTabBar" customModule="GroceryApp" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="size" keyPath="titlePositionAdjustment">
+                                <size key="value" width="-20" height="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2RE-fK-Jqb" kind="relationship" relationship="viewControllers" id="ogB-kJ-OLM"/>
+                        <segue destination="jsz-rz-gja" kind="relationship" relationship="viewControllers" id="sVb-xQ-JfI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dIF-rC-iIV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3272" y="-797"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="SZQ-fi-Wds">
@@ -331,7 +435,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Vru-sX-ABq"/>
         <segue reference="Xbs-uc-qnG"/>
     </inferredMetricsTieBreakers>
 </document>
