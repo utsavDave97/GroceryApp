@@ -91,5 +91,4 @@ class ForgotPasswordViewController: UIViewController
             present(loginViewController, animated: true, completion: nil)
         }
     }
-    
 }

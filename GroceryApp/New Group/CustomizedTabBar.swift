@@ -23,9 +23,16 @@ class CustomizedTabBar: UITabBar
     {
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = createCurvedPath()
-        shapeLayer.strokeColor = UIColor.gray.cgColor
+        shapeLayer.strokeColor = UIColor.white.cgColor
         shapeLayer.fillColor = UIColor.white.cgColor
         shapeLayer.lineWidth = 1.0
+        
+        //Adds shadow to tab bar
+        shapeLayer.shadowColor = UIColor.gray.cgColor
+        shapeLayer.shadowOpacity = 1
+        shapeLayer.shadowRadius = 5
+        shapeLayer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        shapeLayer.masksToBounds = false
         
         if let oldShape = self.shapeLayer
         {
