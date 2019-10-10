@@ -106,8 +106,7 @@ extension OnboardingPageViewController: UIPageViewControllerDelegate
             if let contentViewController = pageViewController.viewControllers?.first as? OnboardingContentViewController
             {
                 currentIndex = contentViewController.index
-                
-                onboardingPageViewControllerDelegate?.didUpdatePageIndex(currentIndex: currentIndex)
+ onboardingPageViewControllerDelegate?.didUpdatePageIndex(currentIndex: currentIndex)
             }
         }
     }
