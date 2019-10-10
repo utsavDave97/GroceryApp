@@ -16,6 +16,14 @@ class CategoryViewController: UIViewController
     
     @IBOutlet weak var cartButton: UIButton!
     
+    let categories = ["Fruits","Vegetables","Meat","Drinks"]
+    let categoriesImages: [UIImage] = [
+        UIImage(named: "fruits.png")!,
+        UIImage(named: "vegetables.png")!,
+        UIImage(named: "meat.png")!,
+        UIImage(named: "drinks.png")!,
+    ]
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -40,7 +48,6 @@ class CategoryViewController: UIViewController
     
     @IBAction func cartButtonTapped(_ sender: Any)
     {
-        
     }
     
     private func setUpButton()
@@ -57,34 +64,20 @@ class CategoryViewController: UIViewController
         print("Testt")
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
-extension CategoryViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+extension CategoryViewController: UICollectionViewDataSource, UICollectionViewDelegate
 {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
-    {
-        return CGSize(width: (collectionView.bounds.width - 10 - 20*2)/2, height: collectionView.bounds.height)
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        4
+        return categories.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCell", for: indexPath) as! CategoryCollectionViewCell
         
-        cell.imageView.image = UIImage(named: "dairy.png")
-        cell.label.text = "Dairy"
+        cell.imageView.image = categoriesImages[indexPath.row]
+        cell.label.text = categories[indexPath.row]
         
         //Applying shadow to cell
         cell.layer.shadowColor = UIColor.black.cgColor
@@ -94,14 +87,12 @@ extension CategoryViewController: UICollectionViewDataSource, UICollectionViewDe
         cell.layer.masksToBounds = false
         cell.layer.cornerRadius = 5
         
-        cell.backgroundColor = UIColor.init(red: 214, green: 214, blue: 214, alpha: 1)
-        
         return cell
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 30, left: 10, bottom: 30, right: 10)
-    }
+}
+
+extension CategoryViewController: UICollectionViewDelegateFlowLayout
+{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 10

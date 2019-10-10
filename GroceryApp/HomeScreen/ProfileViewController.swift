@@ -8,14 +8,26 @@
 
 import UIKit
 
+class UpdateAccountCell: UITableViewCell
+{
+    @IBOutlet var label: UILabel!
+}
+
 class ProfileViewController: UIViewController
 {
+    //MARK: Outlets
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cartButton: UIButton!
     @IBOutlet weak var navBar: UINavigationBar!
     
-
-    override func viewDidLoad() {
+    var tableData = ["Update Email", "Update Password","Delete Account"]
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
 
         // Do any additional setup after loading the view.
         //Create settings button with the image
@@ -37,7 +49,7 @@ class ProfileViewController: UIViewController
     
     private func setUpButton()
     {
-        cartButton.layer.shadowColor = UIColor(red: 0.99, green: 0.03, blue: 0.30, alpha: 1.0).cgColor
+       cartButton.layer.shadowColor = UIColor(red: 0.99, green: 0.03, blue: 0.30, alpha: 1.0).cgColor
        cartButton.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
        cartButton.layer.shadowOpacity = 1.0
        cartButton.layer.shadowRadius = 5
@@ -60,4 +72,21 @@ class ProfileViewController: UIViewController
     }
     */
 
+}
+
+extension ProfileViewController: UITableViewDelegate, UITableViewDataSource
+{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "accountCell") as! UpdateAccountCell
+        
+        cell.label.text = tableData[indexPath.row]
+    
+        return cell
+    }
+    
 }

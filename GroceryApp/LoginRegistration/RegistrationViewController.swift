@@ -124,12 +124,6 @@ class RegistrationViewController: UIViewController
             homeViewController.modalPresentationStyle = .fullScreen
             present(homeViewController, animated: true, completion: nil)
         }
-        
-//        let homeViewController = storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomeViewController
-//
-//        view.window?.rootViewController = homeViewController
-//        view.window?.makeKeyAndVisible()
-        
     }
     
 }
