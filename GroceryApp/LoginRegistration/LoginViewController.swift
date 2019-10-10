@@ -23,6 +23,8 @@ class LoginViewController: UIViewController
         super.viewDidLoad()
         
         setUpForm()
+        
+        checkIfUserLoggedIn()
 
         // Do any additional setup after loading the view.
     }
@@ -36,6 +38,7 @@ class LoginViewController: UIViewController
         
         let storyBoard = UIStoryboard(name: "OnBoarding", bundle: nil)
         if let onboardingViewController = storyBoard.instantiateViewController(withIdentifier: "OnboardingViewController") as? OnboardingViewController {
+            onboardingViewController.modalPresentationStyle = .fullScreen
             present(onboardingViewController, animated: true, completion: nil)
         }
     }
@@ -105,7 +108,20 @@ class LoginViewController: UIViewController
     {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let homeViewController = storyboard.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomeViewController {
+            homeViewController.modalPresentationStyle = .fullScreen
             present(homeViewController, animated: true, completion: nil)
+        }
+    }
+    
+    private func checkIfUserLoggedIn()
+    {
+        if Auth.auth().currentUser != nil
+        {
+            transitionToHome()
+        }
+        else
+        {
+            return
         }
     }
 }
