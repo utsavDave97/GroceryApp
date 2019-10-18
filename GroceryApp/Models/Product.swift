@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+// MARK: - Product
+struct Product: Codable {
+    let id: Int
+    let name: String
+    let price: Double
+    let info: String
+    let imageURL: String
+    let categoryID: Int
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, price, info, imageURL
+        case categoryID = "category_id"
+    }
+}

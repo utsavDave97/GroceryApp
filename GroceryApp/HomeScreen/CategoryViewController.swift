@@ -7,16 +7,19 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class CategoryViewController: UIViewController
 {
-    
+    @IBOutlet weak var settingsButton: UIBarButtonItem!
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var navBar: UINavigationBar!
     
     @IBOutlet weak var cartButton: UIButton!
     
-    let categories = ["Fruits","Vegetables","Meat","Drinks"]
+    static let api = API()
+    var categories = [Category]()
+    
     let categoriesImages: [UIImage] = [
         UIImage(named: "fruits.png")!,
         UIImage(named: "vegetables.png")!,
@@ -28,20 +31,16 @@ class CategoryViewController: UIViewController
     {
         super.viewDidLoad()
         
+        CategoryViewController.api.getCategories { (categories) in
+            
+            self.categories = categories
+            self.collectionView.reloadData()
+        }
+        
         //Set the delegate and datasource to self
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        //Create settings button with the image
-        let settingsButton = UIBarButtonItem(image: UIImage(named:"settings.png"), style: .plain, target: self, action: #selector(settingsPressed))
-        
-        //Set the tint color of settings button
-        settingsButton.tintColor = UIColor.black
-        
-        //Set the rightbar button of navigation item to be settings
-        self.navigationItem.rightBarButtonItem = settingsButton
-        navBar.setItems([navigationItem], animated: false)
-
         // Do any additional setup after loading the view.
         setUpButton()
     }
@@ -59,16 +58,26 @@ class CategoryViewController: UIViewController
         cartButton.layer.masksToBounds = false
     }
     
-    @objc private func settingsPressed()
-    {
-        print("Testt")
+    @IBAction func settingsButtonTapped(_ sender: Any) {
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let productVC = segue.destination as! ProductsTableViewController
+        if let cell = sender as? UICollectionViewCell,
+            let indexPath = self.collectionView.indexPath(for: cell)
+        {
+            let category = categories[indexPath.row]
+            productVC.categoryId = category.id
+        }
+    }
 }
 
+//MARK: CollectionView Datasource
 extension CategoryViewController: UICollectionViewDataSource, UICollectionViewDelegate
 {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         return categories.count
     }
     
@@ -77,7 +86,7 @@ extension CategoryViewController: UICollectionViewDataSource, UICollectionViewDe
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCell", for: indexPath) as! CategoryCollectionViewCell
         
         cell.imageView.image = categoriesImages[indexPath.row]
-        cell.label.text = categories[indexPath.row]
+        cell.label.text = categories[indexPath.row].name
         
         //Applying shadow to cell
         cell.layer.shadowColor = UIColor.black.cgColor
