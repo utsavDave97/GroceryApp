@@ -15,7 +15,9 @@ target 'GroceryApp' do
   
   # Pods for GroceryApp
 
-  pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'Alamofire', '~> 5.0.0-rc.2'
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'Hero'
 end
