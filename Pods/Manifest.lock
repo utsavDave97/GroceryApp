@@ -83,7 +83,6 @@ PODS:
     - nanopb (~> 0.3)
   - gRPC-Core/Interface (1.21.0)
   - GTMSessionFetcher/Core (1.2.2)
-  - Hero (1.4.0)
   - leveldb-library (1.22)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
@@ -91,14 +90,13 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - Protobuf (3.10.0)
-  - SwiftyJSON (4.3.0)
+  - Stripe (18.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-rc.2)
   - Firebase/Auth
   - Firebase/Firestore
-  - Hero
-  - SwiftyJSON (~> 4.0)
+  - Stripe
 
 SPEC REPOS:
   trunk:
@@ -117,11 +115,10 @@ SPEC REPOS:
     - "gRPC-C++"
     - gRPC-Core
     - GTMSessionFetcher
-    - Hero
     - leveldb-library
     - nanopb
     - Protobuf
-    - SwiftyJSON
+    - Stripe
 
 SPEC CHECKSUMS:
   Alamofire: f9450d3c7f6bea2ad62e7a541c3e9b186c7991d6
@@ -139,12 +136,11 @@ SPEC CHECKSUMS:
   "gRPC-C++": 9dfe7b44821e7b3e44aacad2af29d2c21f7cde83
   gRPC-Core: c9aef9a261a1247e881b18059b84d597293c9947
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
-  Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
-  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  Stripe: 8c9ac6b717a38ed4f373d4db9204cfe8c4120d65
 
-PODFILE CHECKSUM: 955a03a155e58a16a7fd9743007c5ef51de1c052
+PODFILE CHECKSUM: 81cfcb580b6bd049d93424e38755816cac44795c
 
 COCOAPODS: 1.8.4
