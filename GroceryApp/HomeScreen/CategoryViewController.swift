@@ -8,7 +8,6 @@
 
 import UIKit
 import Alamofire
-import SwiftyJSON
 
 class CategoryViewController: UIViewController
 {
@@ -45,10 +44,6 @@ class CategoryViewController: UIViewController
         setUpButton()
     }
     
-    @IBAction func cartButtonTapped(_ sender: Any)
-    {
-    }
-    
     private func setUpButton()
     {
         cartButton.layer.shadowColor = UIColor(red: 0.99, green: 0.03, blue: 0.30, alpha: 1.0).cgColor
@@ -63,12 +58,15 @@ class CategoryViewController: UIViewController
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        let productVC = segue.destination as! ProductsTableViewController
-        if let cell = sender as? UICollectionViewCell,
-            let indexPath = self.collectionView.indexPath(for: cell)
+        if(segue.identifier == "showProduct")
         {
-            let category = categories[indexPath.row]
-            productVC.categoryId = category.id
+            let productVC = segue.destination as! ProductsTableViewController
+            if let cell = sender as? UICollectionViewCell,
+                let indexPath = self.collectionView.indexPath(for: cell)
+            {
+                let category = categories[indexPath.row]
+                productVC.categoryId = category.id
+            }
         }
     }
 }
@@ -102,9 +100,7 @@ extension CategoryViewController: UICollectionViewDataSource, UICollectionViewDe
 
 extension CategoryViewController: UICollectionViewDelegateFlowLayout
 {
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 10
     }
-    
 }

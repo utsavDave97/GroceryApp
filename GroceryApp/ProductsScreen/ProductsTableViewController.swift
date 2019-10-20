@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Hero
 
 class ProductsTableViewController: UITableViewController
 {
@@ -19,9 +18,6 @@ class ProductsTableViewController: UITableViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.hero.isEnabled = true
-        
         ProductsTableViewController.api.getProducts(categoryId: categoryId!) { (products) in
             self.products = products
             
@@ -44,12 +40,12 @@ class ProductsTableViewController: UITableViewController
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as! ProductTableViewCell
-
+        
         // Configure the cell...
         cell.productName.text = products[indexPath.row].name
-        cell.productPrice.text = String(format: "%.2f", products[indexPath.row].price)
+        cell.productPrice.text = String(format: "$%.2f", products[indexPath.row].price)
         
-        cell.productImage.hero.id = "productImage"
+        //cell.addProductTapped(products[indexPath.row])
         
         let url = URL(string: products[indexPath.row].imageURL)
         let data = try? Data(contentsOf: url!)
@@ -59,6 +55,19 @@ class ProductsTableViewController: UITableViewController
         }
         
         return cell
+    }
+    
+   
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let detailVC = segue.destination as! ProductDetailViewController
+        if let cell = sender as? ProductTableViewCell,
+            let indexPath = self.tableView.indexPath(for: cell)
+        {
+            let product = products[indexPath.row]
+            detailVC.product = product
+        }
     }
     
     /*

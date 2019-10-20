@@ -13,9 +13,6 @@ class ProductTableViewCell: UITableViewCell
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productPrice: UILabel!
-    @IBOutlet weak var productQuantity: UILabel!
-    @IBOutlet weak var removeProductButton: UIButton!
-    @IBOutlet weak var addProductButton: UIButton!
     
     override func awakeFromNib()
     {
@@ -25,7 +22,7 @@ class ProductTableViewCell: UITableViewCell
         self.productImage.layer.masksToBounds = true
         self.productImage.layer.shadowColor = UIColor.black.cgColor
         self.productImage.layer.shadowOffset = CGSize(width: 5.0, height: 5.0);
-        self.productImage.layer.shadowRadius = 2;
+        self.productImage.layer.shadowRadius = 6;
         self.productImage.layer.shadowOpacity = 0.5;
     }
 
@@ -33,5 +30,5 @@ class ProductTableViewCell: UITableViewCell
     {
         super.setSelected(selected, animated: animated)
     }
-
+    
 }
