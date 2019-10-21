@@ -65,7 +65,7 @@
                                 <rect key="frame" x="20" y="127" width="374" height="637"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="updateEmail" textLabel="tn2-cE-JP7" style="IBUITableViewCellStyleDefault" id="3sO-td-TmN">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="updateEmail" textLabel="tn2-cE-JP7" style="IBUITableViewCellStyleDefault" id="3sO-td-TmN">
                                         <rect key="frame" x="0.0" y="28" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3sO-td-TmN" id="5yP-Vt-yox">
@@ -81,8 +81,11 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="kDn-WL-ukp" kind="show" id="h1x-ud-4TH"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="updatePassword" textLabel="Olp-1u-MKh" style="IBUITableViewCellStyleDefault" id="T6k-xU-F9h">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="updatePassword" textLabel="Olp-1u-MKh" style="IBUITableViewCellStyleDefault" id="T6k-xU-F9h">
                                         <rect key="frame" x="0.0" y="72" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T6k-xU-F9h" id="pls-qC-oBh">
@@ -98,8 +101,11 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="WNv-x9-ZRF" kind="show" id="P3u-8B-h0J"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="deleteAccount" textLabel="AGZ-rb-FH2" style="IBUITableViewCellStyleDefault" id="tYG-EQ-99e">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="deleteAccount" textLabel="AGZ-rb-FH2" style="IBUITableViewCellStyleDefault" id="tYG-EQ-99e">
                                         <rect key="frame" x="0.0" y="116" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tYG-EQ-99e" id="1tm-Ge-WUO">
@@ -116,6 +122,27 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="logOut" textLabel="evL-HH-AoS" imageView="3WM-ib-wUb" style="IBUITableViewCellStyleDefault" id="kUP-MV-s3G">
+                                        <rect key="frame" x="0.0" y="160" width="374" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kUP-MV-s3G" id="HDq-rN-TOg">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="46"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="LOG OUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="evL-HH-AoS">
+                                                    <rect key="frame" x="59" y="0.0" width="295" height="46"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                    <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="power" catalog="system" id="3WM-ib-wUb">
+                                                    <rect key="frame" x="22" y="13" width="20" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -154,16 +181,150 @@
             </objects>
             <point key="canvasLocation" x="4989.8550724637689" y="-281.25"/>
         </scene>
+        <!--Update Password-->
+        <scene sceneID="A6V-1g-bcy">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="WNv-x9-ZRF" customClass="UpdatePasswordViewController" customModule="GroceryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZAe-pg-3Hs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2w6-Kx-Kg4">
+                                <rect key="frame" x="20" y="329" width="374" height="238"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Password" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zw-k7-ab1">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="25"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yo1-IE-vjH">
+                                        <rect key="frame" x="0.0" y="45" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5s-GC-gFa">
+                                        <rect key="frame" x="0.0" y="99" width="374" height="25"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Sa-Xj-GSh">
+                                        <rect key="frame" x="0.0" y="144" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8A-SO-Edy">
+                                        <rect key="frame" x="0.0" y="198" width="374" height="40"/>
+                                        <color key="backgroundColor" red="0.99215686270000003" green="0.031372549020000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="20"/>
+                                        <state key="normal" title="Update Password">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="updatePasswordButtonTapped:" destination="WNv-x9-ZRF" eventType="touchUpInside" id="76E-Ss-Di2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="siG-4Z-ab0" firstAttribute="trailing" secondItem="2w6-Kx-Kg4" secondAttribute="trailing" constant="20" id="55l-lp-PSf"/>
+                            <constraint firstItem="2w6-Kx-Kg4" firstAttribute="centerY" secondItem="ZAe-pg-3Hs" secondAttribute="centerY" id="XBe-tj-t3c"/>
+                            <constraint firstItem="2w6-Kx-Kg4" firstAttribute="centerX" secondItem="ZAe-pg-3Hs" secondAttribute="centerX" id="YW3-Cq-tsI"/>
+                            <constraint firstItem="2w6-Kx-Kg4" firstAttribute="leading" secondItem="siG-4Z-ab0" secondAttribute="leading" constant="20" id="gAf-0D-3Cr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="siG-4Z-ab0"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Update Password" id="7e8-vR-XsP"/>
+                    <connections>
+                        <outlet property="currentPasswordTextfield" destination="Yo1-IE-vjH" id="CJM-JY-ejf"/>
+                        <outlet property="newPasswordTextfield" destination="8Sa-Xj-GSh" id="PUR-hR-bvL"/>
+                        <outlet property="updatePasswordButton" destination="z8A-SO-Edy" id="HOL-9O-aaY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iLd-JH-T6s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4695.652173913044" y="397.76785714285711"/>
+        </scene>
+        <!--Update Email-->
+        <scene sceneID="2QM-Fg-9Vf">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="kDn-WL-ukp" customClass="UpdateEmailViewController" customModule="GroceryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UcO-V8-zhV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="xpm-re-I4P">
+                                <rect key="frame" x="20" y="333" width="374" height="230"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggv-15-0yw">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="25"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZdH-2T-cZN">
+                                        <rect key="frame" x="0.0" y="43" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2a-yM-0NO">
+                                        <rect key="frame" x="0.0" y="95" width="374" height="25"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MSp-O0-Xfs">
+                                        <rect key="frame" x="0.0" y="138" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Za8-RZ-TdZ">
+                                        <rect key="frame" x="0.0" y="190" width="374" height="40"/>
+                                        <color key="backgroundColor" red="0.99215686270000003" green="0.031372549020000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="20"/>
+                                        <state key="normal" title="Update Email">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="updateEmailButtonTapped:" destination="kDn-WL-ukp" eventType="touchUpInside" id="OBN-aX-F7x"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="G11-OX-n55" firstAttribute="trailing" secondItem="xpm-re-I4P" secondAttribute="trailing" constant="20" id="6rp-5x-uZD"/>
+                            <constraint firstItem="xpm-re-I4P" firstAttribute="leading" secondItem="G11-OX-n55" secondAttribute="leading" constant="20" id="BQW-h6-4dZ"/>
+                            <constraint firstItem="xpm-re-I4P" firstAttribute="centerX" secondItem="UcO-V8-zhV" secondAttribute="centerX" id="Jhh-J3-KdL"/>
+                            <constraint firstItem="xpm-re-I4P" firstAttribute="centerY" secondItem="UcO-V8-zhV" secondAttribute="centerY" id="dMd-uT-U6N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="G11-OX-n55"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Update Email" id="alw-7f-2Ug"/>
+                    <connections>
+                        <outlet property="currentEmailTextField" destination="ZdH-2T-cZN" id="SCF-12-rMp"/>
+                        <outlet property="newEmailTextField" destination="MSp-O0-Xfs" id="Gj2-yT-Abb"/>
+                        <outlet property="updateEmailButton" destination="Za8-RZ-TdZ" id="n7A-yA-sKO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BLG-TE-Sng" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5517.3913043478269" y="397.76785714285711"/>
+        </scene>
         <!--Checkout View Controller-->
         <scene sceneID="GfZ-s5-eXQ">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="EhY-Cp-9Ut" customClass="CheckoutViewController" customModule="GroceryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XkN-91-tBy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bTY-GB-vWp">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="744"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="710"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cartCell" rowHeight="110" id="GDF-3Y-dnC" customClass="CartCell" customModule="GroceryApp" customModuleProvider="target">
@@ -242,7 +403,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCh-8K-S9T">
-                                <rect key="frame" x="20" y="752" width="374" height="48"/>
+                                <rect key="frame" x="20" y="806" width="374" height="48"/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.031372549020000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="AW3-xM-ZZo"/>
@@ -641,7 +802,7 @@
                                             <action selector="loginButtonTapped:" destination="nm6-4t-gUg" eventType="touchUpInside" id="Etl-ld-BBw"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPC-3u-6u1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPC-3u-6u1">
                                         <rect key="frame" x="0.0" y="340" width="394" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -722,7 +883,7 @@
                                             <action selector="sendEmailButtonTapped:" destination="Ny8-r2-Nsp" eventType="touchUpInside" id="ZVv-Ql-Nmk"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDW-pA-DqM">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDW-pA-DqM">
                                         <rect key="frame" x="0.0" y="270" width="394" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="BOJ-Oi-jFd"/>
@@ -921,10 +1082,11 @@
         <image name="cart" catalog="system" width="64" height="50"/>
         <image name="house.fill" catalog="system" width="64" height="52"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
+        <image name="power" catalog="system" width="64" height="62"/>
         <image name="settings" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Xbs-uc-qnG"/>
-        <segue reference="1Ik-5i-vei"/>
+        <segue reference="V9B-L5-g3K"/>
     </inferredMetricsTieBreakers>
 </document>
