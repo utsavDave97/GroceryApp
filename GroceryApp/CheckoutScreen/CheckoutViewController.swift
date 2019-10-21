@@ -127,8 +127,6 @@ extension CheckoutViewController: UITableViewDelegate, UITableViewDataSource
         case let cell as TotalCell:
             let total = CheckoutCart.shared.total
             cell.configure(with: total)
-//            let total = CheckoutCart.shared.total
-//            cell.configure(with: total)
             
         default:
             fatalError("Cell does not match the correct type")
@@ -173,7 +171,7 @@ extension CheckoutViewController: STPAddCardViewControllerDelegate
 {
     func addCardViewControllerDidCancel(_ addCardViewController: STPAddCardViewController)
     {
-        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
     func addCardViewController(_ addCardViewController: STPAddCardViewController, didCreatePaymentMethod paymentMethod: STPPaymentMethod, completion: @escaping STPErrorBlock)

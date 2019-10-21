@@ -103,6 +103,9 @@ class RegistrationViewController: UIViewController
                         }
                     }
                     
+                    UserDefaults.standard.set(email, forKey: "email")
+                    UserDefaults.standard.set(password, forKey: "password")
+                    
                     //Transition to the home screen
                     self.transitionToHome()
                 }

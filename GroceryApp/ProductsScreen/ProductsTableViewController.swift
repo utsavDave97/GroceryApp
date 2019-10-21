@@ -14,12 +14,29 @@ class ProductsTableViewController: UITableViewController
     
     static let api = API()
     
+    let activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
+    
     var products = [Product]()
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        
+        view.addSubview(activityIndicator)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.color = UIColor.black
+        let horizontalConstraint = NSLayoutConstraint(item: activityIndicator, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0)
+        view.addConstraint(horizontalConstraint)
+        let verticalConstraint = NSLayoutConstraint(item: activityIndicator, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1, constant: 0)
+        view.addConstraint(verticalConstraint)
+        
+        activityIndicator.startAnimating()
+        
         ProductsTableViewController.api.getProducts(categoryId: categoryId!) { (products) in
             self.products = products
+            
+            self.activityIndicator.stopAnimating()
             
             self.tableView.reloadData()
         }
@@ -57,8 +74,6 @@ class ProductsTableViewController: UITableViewController
         return cell
     }
     
-   
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         let detailVC = segue.destination as! ProductDetailViewController
@@ -69,15 +84,4 @@ class ProductsTableViewController: UITableViewController
             detailVC.product = product
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

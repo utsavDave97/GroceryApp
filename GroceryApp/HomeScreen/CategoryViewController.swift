@@ -19,6 +19,8 @@ class CategoryViewController: UIViewController
     static let api = API()
     var categories = [Category]()
     
+    let activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
+    
     let categoriesImages: [UIImage] = [
         UIImage(named: "fruits.png")!,
         UIImage(named: "vegetables.png")!,
@@ -30,9 +32,23 @@ class CategoryViewController: UIViewController
     {
         super.viewDidLoad()
         
+        view.addSubview(activityIndicator)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.color = UIColor.black
+        let horizontalConstraint = NSLayoutConstraint(item: activityIndicator, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0)
+        view.addConstraint(horizontalConstraint)
+        let verticalConstraint = NSLayoutConstraint(item: activityIndicator, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1, constant: 0)
+        view.addConstraint(verticalConstraint)
+        
+        activityIndicator.startAnimating()
+        
         CategoryViewController.api.getCategories { (categories) in
             
             self.categories = categories
+            
+            self.activityIndicator.stopAnimating()
+            
             self.collectionView.reloadData()
         }
         

@@ -22,10 +22,8 @@ class LoginViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUpForm()
-        
         checkIfUserLoggedIn()
-
+        setUpForm()
         // Do any additional setup after loading the view.
     }
     
@@ -78,6 +76,10 @@ class LoginViewController: UIViewController
                }
                 else
                 {
+                    
+                UserDefaults.standard.set(email, forKey: "email")
+                UserDefaults.standard.set(password, forKey: "password")
+                    
                 //Transition to home screen
                 self.transitionToHome()
                 } 
@@ -98,11 +100,11 @@ class LoginViewController: UIViewController
     }
     
     fileprivate func showError(_ error: String?)
-        {
-            
-            errorLabel.text = error!
-            errorLabel.alpha = 1
-        }
+    {
+        
+        errorLabel.text = error!
+        errorLabel.alpha = 1
+    }
         
     func transitionToHome()
     {

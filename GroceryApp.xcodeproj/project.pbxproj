@@ -33,6 +33,8 @@
 		6FA57546232769A900B687CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FA57544232769A900B687CF /* Main.storyboard */; };
 		6FA57548232769AA00B687CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FA57547232769AA00B687CF /* Assets.xcassets */; };
 		6FA5754B232769AA00B687CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FA57549232769AA00B687CF /* LaunchScreen.storyboard */; };
+		6FABC44B235DF6FB007B30BF /* UpdatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FABC44A235DF6FB007B30BF /* UpdatePasswordViewController.swift */; };
+		6FABC44D235DF707007B30BF /* UpdateEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FABC44C235DF707007B30BF /* UpdateEmailViewController.swift */; };
 		6FB4518223293E3600D84091 /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4518123293E3600D84091 /* Nunito-ExtraLight.ttf */; };
 		6FB4518423293E4300D84091 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4518323293E3E00D84091 /* Nunito-Regular.ttf */; };
 		6FB4518623293E5800D84091 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4518523293E5800D84091 /* Nunito-Light.ttf */; };
@@ -71,6 +73,8 @@
 		6FA57547232769AA00B687CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FA5754A232769AA00B687CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6FA5754C232769AA00B687CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FABC44A235DF6FB007B30BF /* UpdatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordViewController.swift; sourceTree = "<group>"; };
+		6FABC44C235DF707007B30BF /* UpdateEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEmailViewController.swift; sourceTree = "<group>"; };
 		6FB4518123293E3600D84091 /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
 		6FB4518323293E3E00D84091 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		6FB4518523293E5800D84091 /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
@@ -94,6 +98,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F0B27D0235DE70000E22901 /* ProfileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				6FED8CEE234256E8008E689A /* ProfileViewController.swift */,
+				6FABC44A235DF6FB007B30BF /* UpdatePasswordViewController.swift */,
+				6FABC44C235DF707007B30BF /* UpdateEmailViewController.swift */,
+			);
+			path = ProfileScreen;
+			sourceTree = "<group>";
+		};
 		6F653F8A2359E63A007675B2 /* ProductsScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +191,7 @@
 		6FA5753F232769A900B687CF /* GroceryApp */ = {
 			isa = PBXGroup;
 			children = (
+				6F0B27D0235DE70000E22901 /* ProfileScreen */,
 				6F7A8E20235AE2FD00440861 /* CheckoutScreen */,
 				6FA57540232769A900B687CF /* AppDelegate.swift */,
 				6FA57547232769AA00B687CF /* Assets.xcassets */,
@@ -218,7 +233,6 @@
 			children = (
 				6FA57542232769A900B687CF /* HomeViewController.swift */,
 				6FED8CEC234256DA008E689A /* CategoryViewController.swift */,
-				6FED8CEE234256E8008E689A /* ProfileViewController.swift */,
 				6F11A3242346D4CD00D7CCF9 /* CategoryCollectionViewCell.swift */,
 			);
 			path = HomeScreen;
@@ -378,8 +392,10 @@
 				6F8C9233232EF5D5001985D8 /* FormValidation.swift in Sources */,
 				6FED8CEF234256E8008E689A /* ProfileViewController.swift in Sources */,
 				6F653F8C2359E67D007675B2 /* ProductsTableViewController.swift in Sources */,
+				6FABC44B235DF6FB007B30BF /* UpdatePasswordViewController.swift in Sources */,
 				6F7A8E24235AE6A400440861 /* CheckoutViewController.swift in Sources */,
 				6F7A8E22235AE30C00440861 /* CheckoutCart.swift in Sources */,
+				6FABC44D235DF707007B30BF /* UpdateEmailViewController.swift in Sources */,
 				6F609B8D232BC75400216497 /* OnboardingContentViewController.swift in Sources */,
 				6FA57541232769A900B687CF /* AppDelegate.swift in Sources */,
 				6F1A3A592353835600F10722 /* API.swift in Sources */,
