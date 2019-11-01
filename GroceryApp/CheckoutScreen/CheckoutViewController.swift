@@ -73,21 +73,15 @@ class CheckoutViewController: UIViewController
             return
         }
         
-        let addCardViewController = STPAddCardViewController()
-        addCardViewController.delegate = self
+        let config = STPPaymentConfiguration.shared()
+        config.requiredBillingAddressFields = .full
         
+        let addCardViewController = STPAddCardViewController(configuration: config, theme: STPTheme.default())
+        addCardViewController.delegate = self
+
         let navCon = UINavigationController(rootViewController: addCardViewController)
         present(navCon, animated: true, completion: nil)
     }
-    
-    /*
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
 
 //MARK: TableViewDelegate Methods
@@ -173,10 +167,30 @@ extension CheckoutViewController: STPAddCardViewControllerDelegate
     {
         dismiss(animated: true, completion: nil)
     }
-    
+
     func addCardViewController(_ addCardViewController: STPAddCardViewController, didCreatePaymentMethod paymentMethod: STPPaymentMethod, completion: @escaping STPErrorBlock)
     {
-        
+        StripeClient.shared.completeCharge(with: "tok_visa", amount: Int(CheckoutCart.shared.total * 100))
+        { result in
+          switch result {
+          // 1
+          case .success:
+            
+            let alertController = UIAlertController(title: "Congrats",
+                                                    message: "Your payment of \(CheckoutCart.shared.total) was successful!",
+                                  preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
+                self.dismiss(animated: true, completion: nil)
+            })
+
+            alertController.addAction(alertAction)
+            completion(nil)
+
+            self.present(alertController, animated: true)
+          // 2
+          case .failure(let error):
+            completion(error)
+          }
+        }
     }
-    
 }
