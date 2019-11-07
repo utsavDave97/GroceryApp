@@ -24,7 +24,7 @@ class RegistrationViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //Set up the UI
         setUpForm()
     }
     
@@ -55,7 +55,6 @@ class RegistrationViewController: UIViewController
             //Password isn't secure enough
             return "Please make sure your password is at least 8 characters, contains a special character and a number."
         }
-        
         
         return nil
     }
@@ -103,6 +102,7 @@ class RegistrationViewController: UIViewController
                         }
                     }
                     
+                    //Store the values of email and password inside UserDefaults
                     UserDefaults.standard.set(email, forKey: "email")
                     UserDefaults.standard.set(password, forKey: "password")
                     
@@ -113,13 +113,16 @@ class RegistrationViewController: UIViewController
         }
     }
     
+    //This function makes the errorLabel's visibility on or off
     fileprivate func showError(_ error: String?)
     {
-        
         errorLabel.text = error!
         errorLabel.alpha = 1
     }
     
+    /*
+    This function would be called after the user has successfully registered and would be redirected to homeScreen of the app
+    */
     func transitionToHome()
     {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
