@@ -8,7 +8,8 @@
 
 import UIKit
 
-protocol OnboardingPageViewControllerDelegate: class {
+protocol OnboardingPageViewControllerDelegate: class
+{
     func didUpdatePageIndex(currentIndex: Int)
 }
 
@@ -37,6 +38,7 @@ class OnboardingPageViewController: UIPageViewController
     }
 }
 
+//MARK: PageViewControllerDataSource
 extension OnboardingPageViewController: UIPageViewControllerDataSource
 {
     /**
@@ -97,6 +99,7 @@ extension OnboardingPageViewController: UIPageViewControllerDataSource
     }
 }
 
+//MARK: PageViewControllerDelegate
 extension OnboardingPageViewController: UIPageViewControllerDelegate
 {
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool)

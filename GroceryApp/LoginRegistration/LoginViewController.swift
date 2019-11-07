@@ -22,13 +22,16 @@ class LoginViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        checkIfUserLoggedIn()
+        //Set up the UI
         setUpForm()
-        // Do any additional setup after loading the view.
+        
+        //Also check if ther user is logged in or not
+        checkIfUserLoggedIn()
     }
     
     override func viewDidAppear(_ animated: Bool)
     {
+        //Check if the user has seen onboarding screens with the help of boolean value stored inside UserDefaults
         if UserDefaults.standard.bool(forKey: "hasSeenOnboarding")
         {
             return
@@ -71,12 +74,12 @@ class LoginViewController: UIViewController
                 //Check for errors
                if err != nil
                {
-                   //There was an error creating the user
+                //There was an error creating the user
                 self.showError(err?.localizedDescription)
                }
                 else
                 {
-                    
+                //Store the email and password inside UserDefaults
                 UserDefaults.standard.set(email, forKey: "email")
                 UserDefaults.standard.set(password, forKey: "password")
                     
@@ -99,13 +102,16 @@ class LoginViewController: UIViewController
         return nil
     }
     
+    //This function makes the errorLabel's visibility on or off
     fileprivate func showError(_ error: String?)
     {
-        
         errorLabel.text = error!
         errorLabel.alpha = 1
     }
         
+    /*
+     This function would be called after the user has successfully typed in credentials and would be redirected to homeScreen of the app
+     */
     func transitionToHome()
     {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -115,12 +121,15 @@ class LoginViewController: UIViewController
         }
     }
     
+    //Check if user is logged in or not
     private func checkIfUserLoggedIn()
     {
+        //If the user is logged in than take the user to home screen directly
         if Auth.auth().currentUser != nil
         {
             transitionToHome()
         }
+        // Else stay on log in screen
         else
         {
             return

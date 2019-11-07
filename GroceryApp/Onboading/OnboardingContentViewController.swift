@@ -36,9 +36,11 @@ class OnboardingContentViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //Set the text of labels
         headingLabel.text = heading
         subHeadingLabel.text = subHeading
+        
+        //Set the image of UIImage with image inside assets
         contentImageView.image = UIImage(named: imageFile)
     }
 }
