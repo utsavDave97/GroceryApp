@@ -8,31 +8,26 @@
 
 import UIKit
 
-class HomeViewController: UITabBarController {
-
+class HomeViewController: UITabBarController
+{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Set the delegate to self
         delegate = self
-        // Do any additional setup after loading the view.
     }
-
     
-    /**
-     This function would first make sure if the user has already seen the onboarding or not.
-     Based on the userDefaults the user would be represented with onboarding.
-     **/
     override func viewDidAppear(_ animated: Bool)
     {
         
     }
-
 }
 
-
+//MARK: TabBarControllerDelegate
 extension HomeViewController: UITabBarControllerDelegate
 {
-    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool
+    {
         guard let fromView =  selectedViewController?.view, let toView = viewController.view
             else {return false}
         

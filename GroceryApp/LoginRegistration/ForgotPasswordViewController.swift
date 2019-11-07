@@ -26,8 +26,8 @@ class ForgotPasswordViewController: UIViewController
     {
         super.viewDidLoad()
         
+        //Set up the UI
         setUpForm()
-        // Do any additional setup after loading the view.
     }
     
     //MARK: Actions
@@ -75,13 +75,16 @@ class ForgotPasswordViewController: UIViewController
         return nil
     }
     
+    //This function makes the errorLabel's visibility on or off
     fileprivate func showError(_ error: String?)
-    {
-        
+    {   
         errorLabel.text = error!
         errorLabel.alpha = 1
     }
     
+    /*
+    This function would be called after the user has successfully typed in email and would be redirected to log in screen of the app to login again
+    */
     func transitionToLogin()
     {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

@@ -9,7 +9,8 @@
 import Foundation
 
 // MARK: - Product
-struct Product: Codable {
+struct Product: Codable
+{
     let id: Int
     let name: String
     let price: Double
@@ -17,7 +18,8 @@ struct Product: Codable {
     let imageURL: String
     let categoryID: Int
 
-    enum CodingKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey
+    {
         case id, name, price, info, imageURL
         case categoryID = "category_id"
     }
