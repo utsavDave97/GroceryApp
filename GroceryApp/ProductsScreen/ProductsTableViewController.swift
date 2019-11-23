@@ -62,8 +62,6 @@ class ProductsTableViewController: UITableViewController
         cell.productName.text = products[indexPath.row].name
         cell.productPrice.text = String(format: "$%.2f", products[indexPath.row].price)
         
-        //cell.addProductTapped(products[indexPath.row])
-        
         let url = URL(string: products[indexPath.row].imageURL)
         let data = try? Data(contentsOf: url!)
 
@@ -83,5 +81,16 @@ class ProductsTableViewController: UITableViewController
             let product = products[indexPath.row]
             detailVC.product = product
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        cell.alpha = 0
+        UIView.animate(
+            withDuration: 0.5,
+            delay: 0.05 * Double(indexPath.row),
+            animations: {
+                cell.alpha = 1
+        })
     }
 }

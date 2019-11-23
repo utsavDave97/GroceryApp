@@ -29,14 +29,14 @@ final class StripeClient {
     }
     return url
   }()
-  
+    
   func completeCharge(with token: String, amount: Int, completion: @escaping (Result) -> Void) {
     /*
      First, append the charge method path to the baseURL, in order to invoke the charge API available in your back end. You will implement this API shortly.
      */
     let url = baseURL
-    
-    
+
+
     /*
      Next, build a dictionary containing the parameters needed for the charge API. token, amount and currency are mandatory fields.
      */
@@ -44,7 +44,7 @@ final class StripeClient {
       "amount": amount,
       "description": Constants.defaultDescription
     ]
-    
+
     /*
      Finally, make a network request using Alamofire to perform the charge. When the request completes, it invokes a completion closure with the result of the request.
      */
