@@ -75,7 +75,7 @@ class CheckoutViewController: UIViewController
         
         let config = STPPaymentConfiguration.shared()
         config.requiredBillingAddressFields = .full
-        
+
         let addCardViewController = STPAddCardViewController(configuration: config, theme: STPTheme.default())
         addCardViewController.delegate = self
 
@@ -175,7 +175,7 @@ extension CheckoutViewController: STPAddCardViewControllerDelegate
           switch result {
           // 1
           case .success:
-            
+
             let alertController = UIAlertController(title: "Congrats",
                                                     message: "Your payment of \(CheckoutCart.shared.total) was successful!",
                                   preferredStyle: .alert)

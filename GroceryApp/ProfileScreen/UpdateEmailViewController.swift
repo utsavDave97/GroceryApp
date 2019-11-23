@@ -36,11 +36,20 @@ class UpdateEmailViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        
+        view.addGestureRecognizer(tap)
+        
         userEmail = UserDefaults.standard.string(forKey: "email")!
         userPassword = UserDefaults.standard.string(forKey: "password")!
         
         currentEmailTextField.text = userEmail
         currentEmailTextField.isEnabled = false
+    }
+    
+    @objc func dismissKeyboard()
+    {
+        view.endEditing(true)
     }
     
     @IBAction func updateEmailButtonTapped(_ sender: Any)
